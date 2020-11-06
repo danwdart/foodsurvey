@@ -1,6 +1,6 @@
-FROM node:15-alpine
+FROM node:14-alpine
+RUN apk add make python
 WORKDIR /app
 COPY . /app
 RUN npm install
-RUN npm build
 CMD ["npm", "dev"]
